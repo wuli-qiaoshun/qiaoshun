@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网易云音乐-购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/gouwuche.css"/>
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+		<script type="text/javascript" src="js/gouwuche.js" ></script>
+	</head>
+	<body>
+		<div class="main">
+			<!--
+            	作者：offline
+            	时间：2019-07-07
+            	描述：下拉框
+            -->
+			<div class="geren" id="geren">
+						<ul>
+							<li><img src="img/07.png"/><a href="index.html">首页</a></li>
+							<li><img src="img/08.png"/>我的优惠卷</li>
+							<li><img src="img/09.png"/>我的收货地址</li>
+							<li><img src="img/10.png"/>网易云音乐首页</li>
+							<li><img src="img/11.png"/>退出</li>
+						</ul>
+			</div>
+			
+			<!--
+            	作者：offline
+            	时间：2019-07-13
+            	描述：头部
+            -->
+			<header>
+			<div class="top">
+				<div class="top_top">
+					<img src="img/01.gif"/>
+					<img src="img/06.gif" id="xiala"/>
+					<img src="img/05.gif"/>	
+					<input type="text" name="" id="sousuo" value="" placeholder="真无线耳机" />
+					
+				</div>
+			</div>
+			</header>
+			
+			
+			<!--
+            	作者：offline
+            	时间：2019-07-14
+            	描述：购物车
+            -->
+			<section>
+				<div class="content">
+			    <div class="logo">
+			    <h2>购物车</h2>
+			    </div>
+			    
+			    <img src="img/72.png" class="aaa1"/>
+			    <div class="cartList" id="cartList">
+			        <ul>
+			            <li>商品图片</li>
+			            <li>商品信息</li>
+			            <li>单价</li>
+			            <li>数量</li>
+			            <li>总价</li>
+			            <li>操作</li>
+			        </ul>
+			        <ul id="del1">
+			        
+			            <li><img src="img/48.png" ></li>
+			            <li>网易云音乐定制款W800X头戴式蓝牙耳机</li>
+			            <li>¥<input type="text" name="price" value="199"></li>
+			            <li><input type="button" name="minus" value="-" onclick="minus(0);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(0);"></li>
+			            <li id="price0">¥199</li>
+			            <li><p  onclick="collection();">移入收藏</p><p onclick="del1()">删除</p></li>
+			        </ul>
+			        <ul id="del2">
+			        	
+			            <li><img src="img/70.png"></li>
+			            <li>伯朗 i12触控真无线蓝牙耳机蓝牙5.0苹果安卓通用</li>
+			            <li>¥<input type="text" name="price" value="129"></li>
+			            <li><input type="button" name="minus" value="-" onclick="minus(1);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(1);"></li>
+			            <li id="price1">¥129</li>
+			            <li><p  onclick="collection();">移入收藏</p><p onclick="del2()">删除</p></li>
+			        </ul>
+			         <ul id="del3">
+			         	
+			            <li><img src="img/71.png"></li>
+			            <li>skullcandy Ink'd 2骷髅头入耳式重低音耳机手机线控</li>
+			            <li>¥<input type="text" name="price" value="169"></li>
+			            <li><input type="button" name="minus" value="-" onclick="minus(2);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(2);"></li>
+			            <li id="price2">¥169</li>
+			            <li><p  onclick="collection();">移入收藏</p><p onclick="del3()">删除</p></li>
+			        </ul>
+			        <ol>
+			            <li id="totalPrice">（已享受免运费）商品总计：<span id="zongjia"></span></li>
+			            <li><span onclick="total1()">结 算</span></li>
+			        </ol>
+			    </div>
+			</div>
+			</section>
+			
+			
+			<section>
+				<div class="bianji">
+					<div class="bianji_top">
+						<h1>热门推荐</h1>
+					</div>
+					
+					<div class="bianji_bot">
+						<hr />
+						<div class="bianji_bot_1">
+							<div class="bianji_bot_img">
+								<img src="img/24.gif"/>
+							</div>
+							<div class="bianji_bot_2">
+								<span class="sp1">特价</span>
+								<a href="#">博朗i12触控真无线蓝牙耳机蓝牙5.0苹果安卓通用</a>							
+							</div>
+							<span class="sp2">￥199</span>
+						</div>
+						<div class="bianji_bot_1">
+							<div class="bianji_bot_img">
+								<img src="img/25.gif"/>
+							</div>
+							<div class="bianji_bot_2">
+								<span class="sp1">特价</span>
+								<a href="#">博朗i12触控真无线蓝牙耳机蓝牙5.0苹果安卓通用</a>							
+							</div>
+							<span class="sp2">￥199</span>
+						</div>
+						<div class="bianji_bot_1">
+							<div class="bianji_bot_img">
+								<img src="img/26.gif"/>
+							</div>
+							<div class="bianji_bot_2">
+								<span class="sp1">特价</span>
+								<a href="#">博朗i12触控真无线蓝牙耳机蓝牙5.0苹果安卓通用</a>							
+							</div>
+							<span class="sp2">￥199</span>
+						</div>
+						<div class="bianji_bot_1">
+							<div class="bianji_bot_img">
+								<a href="xiangqing.html">
+								<img src="img/27.gif"/></a>
+							</div>
+							<div class="bianji_bot_2">
+								<span class="sp1">用卷减30</span>
+								<a href="#">博朗i12触控真无线蓝牙耳机蓝牙5.0苹果安卓通用</a>							
+							</div>
+							<span class="sp2">￥199</span>
+						</div>
+						<div class="bianji_bot_1">
+							<div class="bianji_bot_img">
+								<img src="img/28.gif"/>
+							</div>
+							<div class="bianji_bot_2">
+								<span class="sp1">特价</span>
+								<a href="#">博朗i12触控真无线蓝牙耳机蓝牙5.0苹果安卓通用</a>							
+							</div>
+							<span class="sp2">￥199</span>
+						</div>
+						<div class="bianji_bot_1">
+							<div class="bianji_bot_img">
+								<img src="img/29.gif"/>
+							</div>
+							<div class="bianji_bot_2">
+								<span class="sp1">特价</span>
+								<a href="#">博朗i12触控真无线蓝牙耳机蓝牙5.0苹果安卓通用</a>							
+							</div>
+							<span class="sp2">￥199</span>
+						</div>
+						<div class="bianji_bot_1">
+							<div class="bianji_bot_img">
+								<img src="img/30.gif" />
+							</div>
+							<div class="bianji_bot_2">
+								<span class="sp1">特价</span>
+								<a href="#">博朗i12触控真无线蓝牙耳机蓝牙5.0苹果安卓通用</a>							
+							</div>
+							<span class="sp2">￥199</span>
+						</div>
+						<div class="bianji_bot_1">
+							<div class="bianji_bot_img">
+								<img src="img/31.gif"/>
+							</div>
+							<div class="bianji_bot_2">
+								<span class="sp1">特价</span>
+								<a href="#">博朗i12触控真无线蓝牙耳机蓝牙5.0苹果安卓通用</a>							
+							</div>
+							<span class="sp2">￥199</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!--
+            	作者：offline
+            	时间：2019-07-07
+            	描述：底部
+            	-->
+			<footer>
+				<div class="bot">
+					<div class="bot_left">
+						<ul class="bot_1">
+							<li>关于网易</li><li>|</li>
+							<li>客户服务</li><li>|</li>
+							<li>服务条款</li><li>|</li>
+							<li>网站导航</li><li>|</li>
+							<li>意见反馈</li>
+						</ul>	
+						<ul class="bot_2">
+							<li>网易公司版权所有&copy;1997-2019</li>
+							<li>杭州乐读科技有限公司运营：浙文网【2015】0415-135</li>
+						</ul>
+					</div>
+					<div class="bot_right">
+						<ul>
+							<li><img src="img/43.gif"/>独立音乐</li>
+							<li><img src="img/44.gif"/>音乐专栏</li>
+							<li><img src="img/45.gif"/>自媒体</li>
+							<li><img src="img/46.gif"/>赞赏</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
